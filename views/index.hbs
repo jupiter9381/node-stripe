@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Payment store</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header"> Buy my dog. </h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			<img class="img-responsive" src="">
+		</div>
+		<div class="col-md-4">
+			<h3>My cute black dog</h3>
+			<p>Please buy this dog so I can show people that stripe works with node</p>
+			<h3>Dog details</h3>
+			<ul>
+				<li>This dog is cute</li>
+			</ul>
+			<form action="/charge" method="post">
+				<script
+					src = "https://checkout.stripe.com/checkout.js"
+					class = "stripe-button"
+					data-key="pk_test_ZidS2xpmgGenCdIhxZnDgFp7"
+					data-amount="30000"
+					data-name="cute dog"
+					data-description="this is my cute dog you have just bought"
+					data-locale = "auto"
+					data-currency = "gbp">
+				</script>
+				<input type="hidden" name="chargeAmount" value="30000">
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
